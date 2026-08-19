@@ -223,7 +223,11 @@ export function WorkflowEditor({ initialWorkflow }: WorkflowEditorProps) {
             </button>
           </div>
 
-          <RunWorkflowButton workflowId={initialWorkflow.id} isActive={isActive} />
+          <RunWorkflowButton
+            workflowId={initialWorkflow.id}
+            isActive={isActive}
+            onActivate={() => handleActiveToggle(true)}
+          />
 
           <div className="text-xs font-black uppercase tracking-wider">
             {saveState === 'DIRTY' && <span className="text-[#C49B10] bg-[#FFF5CC] px-2.5 py-1 rounded-full border-[1.5px] border-[#111]">● Unsaved</span>}

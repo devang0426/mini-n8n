@@ -4,6 +4,18 @@ A production-grade, multi-tenant AI workflow automation platform inspired by n8n
 
 Users can construct, trigger, monitor, and approve multi-step automated workflows containing LLM prompts, external HTTP integrations, conditional logic, restricted database writes, system notifications, and human-in-the-loop approval gates.
 
+
+---
+
+## 📑 Submission & Evaluation Deliverables
+
+1. **GitHub Repository**: [`https://github.com/devang0426/mini-n8n.git`](https://github.com/devang0426/mini-n8n.git)
+2. **Architectural Write-Up**: Read the 1-page write-up covering schema reasoning, permission enforcement layers, and approval-gate pause/resume in [`ARCHITECTURE.md`](file:///c:/Users/HP/Desktop/workflo/ARCHITECTURE.md).
+3. **Hasura Metadata & Schema Migrations**:
+   - PostgreSQL Schema SQL: [`nhost/migrations/default/001_initial_schema/up.sql`](file:///c:/Users/HP/Desktop/workflo/nhost/migrations/default/001_initial_schema/up.sql)
+   - Hasura Metadata & RLS Permissions: [`nhost/metadata/`](file:///c:/Users/HP/Desktop/workflo/nhost/metadata/)
+4. **Scenario Recording & Demo**: Instructions below for running and recording the end-to-end execution flow.
+
 ---
 
 ## 🎯 Demo Login Credentials for Recruiters & Evaluators

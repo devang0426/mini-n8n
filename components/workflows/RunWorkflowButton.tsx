@@ -9,9 +9,10 @@ import { triggerWorkflowRunAction } from '@/lib/graphql/actions';
 interface RunWorkflowButtonProps {
   workflowId: string;
   isActive: boolean;
+  onActivate?: () => void;
 }
 
-export function RunWorkflowButton({ workflowId, isActive }: RunWorkflowButtonProps) {
+export function RunWorkflowButton({ workflowId, isActive, onActivate }: RunWorkflowButtonProps) {
   const router = useRouter();
   const { accessToken } = useAuth();
   const { isViewer, organization } = useOrganization();
@@ -89,9 +90,18 @@ export function RunWorkflowButton({ workflowId, isActive }: RunWorkflowButtonPro
       </button>
 
       {!isActive && (
-        <span className="text-[11px] text-[#C49B10] font-black uppercase">
-          Workflow must be active to run
-        </span>
+        <div className="flex items-center space-x-1.5 text-[11px] text-[#C49B10] font-black uppercase">
+          <span>Workflow must be active to run</span>
+          {onActivate && (
+            <button
+              type="button"
+              onClick={onActivate}
+              className="text-[#5B3FC8] underline hover:text-[#111] cursor-pointer font-extrabold"
+            >
+              (Enable Now)
+            </button>
+          )}
+        </div>
       )}
 
       {isQuotaExhausted && (

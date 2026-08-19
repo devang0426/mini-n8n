@@ -461,7 +461,7 @@ export function validateAIProposal({
   const finalProposal: AIWorkflowProposal = {
     name,
     description,
-    is_active: false, // AI proposals are always initialized to inactive until explicit activation
+    is_active: typeof proposalObj.is_active === 'boolean' ? proposalObj.is_active : true,
     triggers: validatedTriggers,
     steps: validatedSteps,
   };
