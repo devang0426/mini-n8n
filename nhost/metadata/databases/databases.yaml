@@ -1,0 +1,28 @@
+- name: default
+  kind: postgres
+  tables:
+    - !include default/tables/auth_oauth2_auth_requests.json
+    - !include default/tables/auth_oauth2_authorization_codes.json
+    - !include default/tables/auth_oauth2_clients.json
+    - !include default/tables/auth_oauth2_refresh_tokens.json
+    - !include default/tables/auth_provider_requests.json
+    - !include default/tables/auth_providers.json
+    - !include default/tables/auth_refresh_token_types.json
+    - !include default/tables/auth_refresh_tokens.json
+    - !include default/tables/auth_roles.json
+    - !include default/tables/auth_user_providers.json
+    - !include default/tables/auth_user_roles.json
+    - !include default/tables/auth_user_security_keys.json
+    - !include default/tables/auth_users.json
+    - !include default/tables/public_audit_logs.json
+    - !include default/tables/public_notifications.json
+    - !include default/tables/public_org_members.json
+    - !include default/tables/public_organizations.json
+    - !include default/tables/public_step_runs.json
+    - !include default/tables/public_workflow_runs.json
+    - !include default/tables/public_workflow_steps.json
+    - !include default/tables/public_workflow_triggers.json
+    - !include default/tables/public_workflows.json
+    - !include default/tables/storage_buckets.json
+    - !include default/tables/storage_files.json
+    - !include default/tables/storage_virus.json

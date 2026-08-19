@@ -1,0 +1,220 @@
+{
+  "table": {
+    "name": "workflow_steps",
+    "schema": "public"
+  },
+  "object_relationships": [
+    {
+      "name": "workflow",
+      "using": {
+        "foreign_key_constraint_on": "workflow_id"
+      }
+    }
+  ],
+  "array_relationships": [
+    {
+      "name": "step_runs",
+      "using": {
+        "foreign_key_constraint_on": {
+          "column": "workflow_step_id",
+          "table": {
+            "name": "step_runs",
+            "schema": "public"
+          }
+        }
+      }
+    }
+  ],
+  "insert_permissions": [
+    {
+      "role": "user",
+      "permission": {
+        "check": {
+          "_or": [
+            {
+              "workflow": {
+                "organization": {
+                  "members": {
+                    "role": {
+                      "_eq": "owner"
+                    },
+                    "user_id": {
+                      "_eq": "X-Hasura-User-Id"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "_and": [
+                {
+                  "workflow": {
+                    "organization": {
+                      "members": {
+                        "role": {
+                          "_eq": "editor"
+                        },
+                        "user_id": {
+                          "_eq": "X-Hasura-User-Id"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "step_type": {
+                    "_in": [
+                      "llm_call",
+                      "http_request",
+                      "conditional_branch",
+                      "approval_gate"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "columns": [
+          "workflow_id",
+          "position",
+          "step_type",
+          "config"
+        ]
+      }
+    }
+  ],
+  "select_permissions": [
+    {
+      "role": "user",
+      "permission": {
+        "columns": [
+          "id",
+          "workflow_id",
+          "position",
+          "step_type",
+          "config",
+          "created_at",
+          "updated_at"
+        ],
+        "filter": {
+          "workflow": {
+            "organization": {
+              "members": {
+                "role": {
+                  "_in": [
+                    "owner",
+                    "editor",
+                    "viewer"
+                  ]
+                },
+                "user_id": {
+                  "_eq": "X-Hasura-User-Id"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "update_permissions": [
+    {
+      "role": "user",
+      "permission": {
+        "columns": [
+          "position",
+          "step_type",
+          "config"
+        ],
+        "filter": {
+          "workflow": {
+            "organization": {
+              "members": {
+                "role": {
+                  "_in": [
+                    "owner",
+                    "editor"
+                  ]
+                },
+                "user_id": {
+                  "_eq": "X-Hasura-User-Id"
+                }
+              }
+            }
+          }
+        },
+        "check": {
+          "_or": [
+            {
+              "workflow": {
+                "organization": {
+                  "members": {
+                    "role": {
+                      "_eq": "owner"
+                    },
+                    "user_id": {
+                      "_eq": "X-Hasura-User-Id"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "_and": [
+                {
+                  "workflow": {
+                    "organization": {
+                      "members": {
+                        "role": {
+                          "_eq": "editor"
+                        },
+                        "user_id": {
+                          "_eq": "X-Hasura-User-Id"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "step_type": {
+                    "_in": [
+                      "llm_call",
+                      "http_request",
+                      "conditional_branch",
+                      "approval_gate"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "delete_permissions": [
+    {
+      "role": "user",
+      "permission": {
+        "filter": {
+          "workflow": {
+            "organization": {
+              "members": {
+                "role": {
+                  "_in": [
+                    "owner",
+                    "editor"
+                  ]
+                },
+                "user_id": {
+                  "_eq": "X-Hasura-User-Id"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

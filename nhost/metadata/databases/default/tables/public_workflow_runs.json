@@ -1,0 +1,82 @@
+{
+  "table": {
+    "name": "workflow_runs",
+    "schema": "public"
+  },
+  "object_relationships": [
+    {
+      "name": "organization",
+      "using": {
+        "foreign_key_constraint_on": "org_id"
+      }
+    },
+    {
+      "name": "workflow",
+      "using": {
+        "foreign_key_constraint_on": "workflow_id"
+      }
+    }
+  ],
+  "array_relationships": [
+    {
+      "name": "notifications",
+      "using": {
+        "foreign_key_constraint_on": {
+          "column": "workflow_run_id",
+          "table": {
+            "name": "notifications",
+            "schema": "public"
+          }
+        }
+      }
+    },
+    {
+      "name": "step_runs",
+      "using": {
+        "foreign_key_constraint_on": {
+          "column": "workflow_run_id",
+          "table": {
+            "name": "step_runs",
+            "schema": "public"
+          }
+        }
+      }
+    }
+  ],
+  "select_permissions": [
+    {
+      "role": "user",
+      "permission": {
+        "columns": [
+          "id",
+          "workflow_id",
+          "org_id",
+          "status",
+          "trigger_type",
+          "input",
+          "error",
+          "started_at",
+          "completed_at",
+          "created_at",
+          "updated_at"
+        ],
+        "filter": {
+          "organization": {
+            "members": {
+              "role": {
+                "_in": [
+                  "owner",
+                  "editor",
+                  "viewer"
+                ]
+              },
+              "user_id": {
+                "_eq": "X-Hasura-User-Id"
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

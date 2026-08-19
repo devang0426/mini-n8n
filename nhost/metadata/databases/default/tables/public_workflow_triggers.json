@@ -1,0 +1,196 @@
+{
+  "table": {
+    "name": "workflow_triggers",
+    "schema": "public"
+  },
+  "object_relationships": [
+    {
+      "name": "workflow",
+      "using": {
+        "foreign_key_constraint_on": "workflow_id"
+      }
+    }
+  ],
+  "insert_permissions": [
+    {
+      "role": "user",
+      "permission": {
+        "check": {
+          "_or": [
+            {
+              "workflow": {
+                "organization": {
+                  "members": {
+                    "role": {
+                      "_eq": "owner"
+                    },
+                    "user_id": {
+                      "_eq": "X-Hasura-User-Id"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "_and": [
+                {
+                  "workflow": {
+                    "organization": {
+                      "members": {
+                        "role": {
+                          "_eq": "editor"
+                        },
+                        "user_id": {
+                          "_eq": "X-Hasura-User-Id"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "trigger_type": {
+                    "_neq": "webhook"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "columns": [
+          "workflow_id",
+          "trigger_type",
+          "config",
+          "is_enabled"
+        ]
+      }
+    }
+  ],
+  "select_permissions": [
+    {
+      "role": "user",
+      "permission": {
+        "columns": [
+          "id",
+          "workflow_id",
+          "trigger_type",
+          "config",
+          "is_enabled",
+          "created_at",
+          "updated_at"
+        ],
+        "filter": {
+          "workflow": {
+            "organization": {
+              "members": {
+                "role": {
+                  "_in": [
+                    "owner",
+                    "editor",
+                    "viewer"
+                  ]
+                },
+                "user_id": {
+                  "_eq": "X-Hasura-User-Id"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "update_permissions": [
+    {
+      "role": "user",
+      "permission": {
+        "columns": [
+          "trigger_type",
+          "config",
+          "is_enabled"
+        ],
+        "filter": {
+          "workflow": {
+            "organization": {
+              "members": {
+                "role": {
+                  "_in": [
+                    "owner",
+                    "editor"
+                  ]
+                },
+                "user_id": {
+                  "_eq": "X-Hasura-User-Id"
+                }
+              }
+            }
+          }
+        },
+        "check": {
+          "_or": [
+            {
+              "workflow": {
+                "organization": {
+                  "members": {
+                    "role": {
+                      "_eq": "owner"
+                    },
+                    "user_id": {
+                      "_eq": "X-Hasura-User-Id"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "_and": [
+                {
+                  "workflow": {
+                    "organization": {
+                      "members": {
+                        "role": {
+                          "_eq": "editor"
+                        },
+                        "user_id": {
+                          "_eq": "X-Hasura-User-Id"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "trigger_type": {
+                    "_neq": "webhook"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "delete_permissions": [
+    {
+      "role": "user",
+      "permission": {
+        "filter": {
+          "workflow": {
+            "organization": {
+              "members": {
+                "role": {
+                  "_in": [
+                    "owner",
+                    "editor"
+                  ]
+                },
+                "user_id": {
+                  "_eq": "X-Hasura-User-Id"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

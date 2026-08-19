@@ -1,26 +1,166 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-base: #F5EFE6;
+  --bg-surface: #FFFFFF;
+  --bg-elevated: #F9F6F1;
+  --bg-subtle: #F0EBE2;
+  --border-default: #111111;
+  --border-muted: #444444;
+  --text-primary: #111111;
+  --text-secondary: #555555;
+  --text-muted: #888888;
+  --accent-yellow: #F5C842;
+  --accent-yellow-dark: #C49B10;
+  --accent-pink: #FF6B8A;
+  --accent-teal: #00C8B4;
+  --accent-cyan: #00C8D4;
+  --accent-ai: #7B5CF5;
+  --accent-ai-text: #EDE8FF;
+  --state-error: #FF6B6B;
+  --state-success: #B6F5C8;
+  --state-success-text: #0A6630;
+  --state-warning: #F5C842;
+  --shadow-nb: 4px 4px 0 #111111;
+  --shadow-nb-lg: 6px 6px 0 #111111;
+  --shadow-nb-sm: 3px 3px 0 #111111;
+  --shadow-nb-accent: 4px 4px 0 var(--accent-yellow);
+  --shadow-nb-ai: 4px 4px 0 var(--accent-ai);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-bg-base: var(--bg-base);
+  --color-bg-surface: var(--bg-surface);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-bg-subtle: var(--bg-subtle);
+  --color-border-default: var(--border-default);
+  --color-border-muted: var(--border-muted);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-accent-yellow: var(--accent-yellow);
+  --color-accent-pink: var(--accent-pink);
+  --color-accent-teal: var(--accent-teal);
+  --color-accent-cyan: var(--accent-cyan);
+  --color-accent-ai: var(--accent-ai);
+  --color-state-error: var(--state-error);
+  --color-state-success: var(--state-success);
+  --color-state-warning: var(--state-warning);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  min-height: 100vh;
+}
+
+/* Playful Neobrutalism Component Utility Classes */
+.nb-card {
+  background-color: var(--bg-surface);
+  border: 2.5px solid var(--border-default);
+  border-radius: 16px;
+  box-shadow: var(--shadow-nb);
+  transition: transform 80ms ease-in, box-shadow 80ms ease-in;
+}
+
+.nb-card-hover:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #111111;
+}
+
+.nb-btn {
+  background-color: var(--accent-yellow);
+  color: var(--text-primary);
+  border: 2.5px solid var(--border-default);
+  border-radius: 12px;
+  box-shadow: var(--shadow-nb);
+  padding: 9px 20px;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: transform 80ms ease-in, box-shadow 80ms ease-in;
+}
+
+.nb-btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0 #111111;
+}
+
+.nb-btn:active {
+  transform: translate(3px, 3px);
+  box-shadow: none;
+}
+
+.nb-btn-black {
+  background-color: #111111;
+  color: #FFFFFF;
+}
+
+.nb-btn-white {
+  background-color: #FFFFFF;
+  color: #111111;
+}
+
+.nb-btn-teal {
+  background-color: var(--accent-teal);
+  color: #111111;
+}
+
+.nb-btn-ai {
+  background-color: var(--accent-ai);
+  color: #FFFFFF;
+}
+
+.nb-btn-pink {
+  background-color: var(--accent-pink);
+  color: #FFFFFF;
+}
+
+.nb-btn-error {
+  background-color: var(--state-error);
+  color: #FFFFFF;
+}
+
+.nb-input {
+  background-color: var(--bg-surface);
+  border: 2.5px solid var(--border-default);
+  border-radius: 10px;
+  box-shadow: var(--shadow-nb-sm);
+  padding: 9px 13px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  outline: none;
+  transition: box-shadow 80ms ease-in;
+}
+
+.nb-input:focus {
+  box-shadow: var(--shadow-nb-accent);
+}
+
+.nb-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 2px solid var(--border-default);
+  border-radius: 9999px;
+  padding: 3px 10px;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.nb-modal {
+  background-color: var(--bg-surface);
+  border: 2.5px solid var(--border-default);
+  border-radius: 20px;
+  box-shadow: var(--shadow-nb-lg);
 }

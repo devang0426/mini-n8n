@@ -1,0 +1,94 @@
+{
+  "p6b_ownerA_fixed@test.com": {
+    "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjczZjk2NTI4LTAzM2ItNGY0NS1iNmUyLTgxZTNiMDA0MjY5NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3ODcwNTI4NTgsImh0dHBzOi8vaGFzdXJhLmlvL2p3dC9jbGFpbXMiOnsieC1oYXN1cmEtYWxsb3dlZC1yb2xlcyI6WyJ1c2VyIl0sIngtaGFzdXJhLWRlZmF1bHQtcm9sZSI6InVzZXIiLCJ4LWhhc3VyYS11c2VyLWlkIjoiNjgyZmEzMzYtNTQ5Ny00MTRjLTk1YjctZTUzNDQxNGVhYjEwIiwieC1oYXN1cmEtdXNlci1pcy1hbm9ueW1vdXMiOiJmYWxzZSJ9LCJpYXQiOjE3ODcwNTE5NTgsImlzcyI6Imh0dHBzOi8vcndid3JwdGl0d2t4dXFnbWJicGkuYXV0aC5hcC1zb3V0aC0xLm5ob3N0LnJ1bi92MSIsInN1YiI6IjY4MmZhMzM2LTU0OTctNDE0Yy05NWI3LWU1MzQ0MTRlYWIxMCJ9.SXmCUG38Lhr1hZu76JAf_OCzrif448bL3aSZ8LWEDEJ1sUz8K50yhLhhAQaxcjgVOZ1srtBlezWBG19e6hpoBjhCB549Ivxk-SvEK0bO92NjlSZU0Ip6DaARM9w_AHWPNXJnEB6T1b8ebDF5bMWBDx1Vc0gizC5ffhMUFQLKDT-E_vP_nFzBPr5hQpxnaEJJgCOJLizJc56VXp2_8DqdYF8CxcsxlRT9sXkIhLNNzmumLynuPsEuWbRzkLB5hZUt0R4XrODv739QgFc9x3t3PU3EYJARmQMXOJOegynykQ-ND8cKVqJ7WqEAIQMkfl6Kr1szkDuvMj8_ELd_vH01IQ",
+    "accessTokenExpiresIn": 900,
+    "refreshToken": "4177a64d-ee6c-4383-bb75-4ef6335ca20a",
+    "refreshTokenId": "6b20fe18-7b18-49cf-8fa8-4bd068b3f65d",
+    "user": {
+      "activeMfaType": null,
+      "avatarUrl": "",
+      "createdAt": "2026-08-18T11:17:19.207208Z",
+      "defaultRole": "user",
+      "displayName": "",
+      "email": "p6b_ownerA_fixed@test.com",
+      "emailVerified": true,
+      "id": "682fa336-5497-414c-95b7-e534414eab10",
+      "isAnonymous": false,
+      "locale": "en",
+      "metadata": null,
+      "phoneNumberVerified": false,
+      "roles": [
+        "user"
+      ]
+    }
+  },
+  "p6b_editorA_fixed@test.com": {
+    "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjczZjk2NTI4LTAzM2ItNGY0NS1iNmUyLTgxZTNiMDA0MjY5NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3ODcwNTI5MDIsImh0dHBzOi8vaGFzdXJhLmlvL2p3dC9jbGFpbXMiOnsieC1oYXN1cmEtYWxsb3dlZC1yb2xlcyI6WyJ1c2VyIl0sIngtaGFzdXJhLWRlZmF1bHQtcm9sZSI6InVzZXIiLCJ4LWhhc3VyYS11c2VyLWlkIjoiZGMxMmUzNDctYzAzZC00YTNjLTk0NmEtNGNkNTUyZjg3YjljIiwieC1oYXN1cmEtdXNlci1pcy1hbm9ueW1vdXMiOiJmYWxzZSJ9LCJpYXQiOjE3ODcwNTIwMDIsImlzcyI6Imh0dHBzOi8vcndid3JwdGl0d2t4dXFnbWJicGkuYXV0aC5hcC1zb3V0aC0xLm5ob3N0LnJ1bi92MSIsInN1YiI6ImRjMTJlMzQ3LWMwM2QtNGEzYy05NDZhLTRjZDU1MmY4N2I5YyJ9.JeCxwQCq3-xnY8nKI9YBuW6pHG13phJxc765HSr2-FurwnhuDj0BDCeII7N4LZu3FIKDRpDuFowEqbYeVtQCGwrEFYcY0mfiwFvci8NSCo-EyInq63uHNS1wJ6S2G50afM6Jo6SpdWaNfVf9IpoNoUmfs2eeLiVMEbE3pBLJqWuLx-2dTRk5IqJQb7VUt--iVM1pPWh266FdpNSVUYV3N253t4XRj2b8sAxRPYJbE_NhTer73_zvlHd1yxLLDS15-3cIMgZBlXRuUjPrjwDRQye_NPOVX73azByaW6tP3RlV9BmrVZ14PgZN7zNNv7DpslI0-ZEMyxPOiR42ixeGyQ",
+    "accessTokenExpiresIn": 900,
+    "refreshToken": "0dae708a-6273-4f6b-bec9-ba520e1bc76a",
+    "refreshTokenId": "0533845e-81b8-47e7-b7ae-a653fefd848b",
+    "user": {
+      "activeMfaType": null,
+      "avatarUrl": "",
+      "createdAt": "2026-08-18T11:17:20.105744Z",
+      "defaultRole": "user",
+      "displayName": "",
+      "email": "p6b_editorA_fixed@test.com",
+      "emailVerified": true,
+      "id": "dc12e347-c03d-4a3c-946a-4cd552f87b9c",
+      "isAnonymous": false,
+      "locale": "en",
+      "metadata": null,
+      "phoneNumberVerified": false,
+      "roles": [
+        "user"
+      ]
+    }
+  },
+  "p6b_viewerA_fixed@test.com": {
+    "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjczZjk2NTI4LTAzM2ItNGY0NS1iNmUyLTgxZTNiMDA0MjY5NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3ODcwNTI5MzMsImh0dHBzOi8vaGFzdXJhLmlvL2p3dC9jbGFpbXMiOnsieC1oYXN1cmEtYWxsb3dlZC1yb2xlcyI6WyJ1c2VyIl0sIngtaGFzdXJhLWRlZmF1bHQtcm9sZSI6InVzZXIiLCJ4LWhhc3VyYS11c2VyLWlkIjoiMTZmYzhlOTYtODkxMS00OTRlLWFjMjAtMjAyMzcyN2E2NjAyIiwieC1oYXN1cmEtdXNlci1pcy1hbm9ueW1vdXMiOiJmYWxzZSJ9LCJpYXQiOjE3ODcwNTIwMzMsImlzcyI6Imh0dHBzOi8vcndid3JwdGl0d2t4dXFnbWJicGkuYXV0aC5hcC1zb3V0aC0xLm5ob3N0LnJ1bi92MSIsInN1YiI6IjE2ZmM4ZTk2LTg5MTEtNDk0ZS1hYzIwLTIwMjM3MjdhNjYwMiJ9.eWdgBpvPRX8K5JBguerSTugNuqoRIJmtIFxBDM2mXPzqCE6-30AA8msLh7FDJsCkepSe5euH3jocHo7XaOZGGEkRDM7DnWdHJzrJ1SBwY7qMvJ-Np_PQ6oQ0FjibaJhxCrRSSVmLioKN2nVdx72rlcINCOLG_SedExEjiDm4Sm5qnzoNPLMB0fQnkzP9IFwEW6JLhp9JKbkxTTexVd6zR_Ima3dhl0HE1Ao086LHfZOCCae0iuEZEdOIdn-otS1tAAcg5eIOcw5150W2w1WGTiQrlZ2zjGGB0a77jMVtyQVJXboGYwVhk4fh1N1V7j4H8rL-948LcPojcHHsxOt0nA",
+    "accessTokenExpiresIn": 900,
+    "refreshToken": "919e3a48-8667-4fd1-a92b-de28d8e8103e",
+    "refreshTokenId": "328904b1-0bec-427b-a2f6-7a65f8715cb5",
+    "user": {
+      "activeMfaType": null,
+      "avatarUrl": "",
+      "createdAt": "2026-08-18T11:18:04.231184Z",
+      "defaultRole": "user",
+      "displayName": "",
+      "email": "p6b_viewerA_fixed@test.com",
+      "emailVerified": true,
+      "id": "16fc8e96-8911-494e-ac20-2023727a6602",
+      "isAnonymous": false,
+      "locale": "en",
+      "metadata": null,
+      "phoneNumberVerified": false,
+      "roles": [
+        "user"
+      ]
+    }
+  },
+  "p6b_ownerB_fixed@test.com": {
+    "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjczZjk2NTI4LTAzM2ItNGY0NS1iNmUyLTgxZTNiMDA0MjY5NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3ODcwNTI5NjUsImh0dHBzOi8vaGFzdXJhLmlvL2p3dC9jbGFpbXMiOnsieC1oYXN1cmEtYWxsb3dlZC1yb2xlcyI6WyJ1c2VyIl0sIngtaGFzdXJhLWRlZmF1bHQtcm9sZSI6InVzZXIiLCJ4LWhhc3VyYS11c2VyLWlkIjoiZWI3ZjI5N2MtNmUxZC00MmM3LWEwMGEtYTQ0MWY2MDk1ZTVlIiwieC1oYXN1cmEtdXNlci1pcy1hbm9ueW1vdXMiOiJmYWxzZSJ9LCJpYXQiOjE3ODcwNTIwNjUsImlzcyI6Imh0dHBzOi8vcndid3JwdGl0d2t4dXFnbWJicGkuYXV0aC5hcC1zb3V0aC0xLm5ob3N0LnJ1bi92MSIsInN1YiI6ImViN2YyOTdjLTZlMWQtNDJjNy1hMDBhLWE0NDFmNjA5NWU1ZSJ9.oHIVIqGgINVLSVpzlUlN_-Z-8wQWEWwHo7JMS7XlbtmEO2SKwA-Z5RRePeQGtCVKn36fqIMedrItutg4p78VUydheBL5NdBWxDzJqMuYr1PLwfp9-DTt4gdCNnbPz5aBTiDiZnWAlA7tYdbWTw6aWBElDjfFAyvACiI2niKodQ2BRXUY3lbNuMl9m_UJYm8h5aTpcRbjPie4q1EKElY-7iYrxv0BS7mxA2YHG9kGpVZg5BUsiflDsptmnUimQIYUQ9-CJT3NCnJb-btMMhKPBCUxjTt4IC02pUDmBSgTPufPFeIauD4SaoiMf1bHLCg0y2c9dLPq6hxACQOPaMYrKQ",
+    "accessTokenExpiresIn": 900,
+    "refreshToken": "7263774e-0e8f-448f-a6d5-02fb0852bbcc",
+    "refreshTokenId": "7a6df61b-2660-494d-ab8e-3ccc873f4bd5",
+    "user": {
+      "activeMfaType": null,
+      "avatarUrl": "",
+      "createdAt": "2026-08-18T11:20:34.111691Z",
+      "defaultRole": "user",
+      "displayName": "",
+      "email": "p6b_ownerB_fixed@test.com",
+      "emailVerified": true,
+      "id": "eb7f297c-6e1d-42c7-a00a-a441f6095e5e",
+      "isAnonymous": false,
+      "locale": "en",
+      "metadata": null,
+      "phoneNumberVerified": false,
+      "roles": [
+        "user"
+      ]
+    }
+  }
+}
