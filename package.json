@@ -12,7 +12,7 @@
     "@nhost/nextjs": "^2.3.1",
     "@nhost/react": "^3.11.2",
     "@xyflow/react": "^12.11.3",
-    "next": "16.3.1",
+    "next": "15.5.23",
     "react": "19.2.8",
     "react-dom": "19.2.8"
   },
@@ -22,7 +22,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.3.1",
+    "eslint-config-next": "15.5.23",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
